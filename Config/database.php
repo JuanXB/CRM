@@ -5,6 +5,6 @@ return array(
   "host" => "localhost",
   "user" => "root",
   "password" => "",
-  "dataBase" => "contab",
+  "dataBase" => "crm_portafolio",
   "charset" => "utf8"
 );
