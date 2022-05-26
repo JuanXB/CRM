@@ -1,9 +1,9 @@
 <?php
 class VentasClientes extends BasicEntity
 {
-  private int $id;
-  private int $idCliente;
-  private int $monto;
+  private  $id;
+  private  $idCliente;
+  private float $monto;
   private string $fecha;
 
   public function __construct($adapter)
@@ -13,36 +13,36 @@ class VentasClientes extends BasicEntity
   }
 
   // get y set del id correspondiente a la venta a nuestro cliente
-  public function getId(): int
+  public function getId()
   {
     return $this->id;
   }
 
-  public function setId(int $id): void
+  public function setId($id): void
   {
     $this->id = $id;
   }
 
   // get y set del id del cliente al que le correponden las ventas
-  public function getIdCliente(): int
+  public function getIdCliente()
   {
     return $this->idCliente;
   }
 
-  public function setIdCliente(int $idCliente): void
+  public function setIdCliente($idCliente): void
   {
-    $this->Edad = $idCliente;
+    $this->idCliente = $idCliente;
   }
 
   // get y set del monto de la venta 
-  public function getMonto(): int
+  public function getMonto(): float
   {
     return $this->monto;
   }
 
-  public function setMonto(int $monto): void
+  public function setMonto(float $monto): void
   {
-    $this->Edad = $monto;
+    $this->monto = $monto;
   }
 
   // get y set de la fecha que se realizo la venta
@@ -53,7 +53,7 @@ class VentasClientes extends BasicEntity
 
   public function setFecha(string $fecha): void
   {
-    $this->fechaReistro = $fecha;
+    $this->fecha = $fecha;
   }
 
   //Se guardan los datos de la venta realizada

@@ -1,7 +1,7 @@
 <?php
 class Clientes extends BasicEntity
 {
-  private int $id;
+  private  $id;
   private string $nombre;
   private string $ciudad;
   private int $edad;
@@ -17,12 +17,12 @@ class Clientes extends BasicEntity
   }
 
   // get y set del id del cliente 
-  public function getId(): int
+  public function getId()
   {
     return $this->id;
   }
 
-  public function setId(int $id): void
+  public function setId($id): void
   {
     $this->id = $id;
   }
