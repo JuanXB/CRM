@@ -46,4 +46,12 @@ class BasicModel extends BasicEntity
 
     return $resultSet;
   }
+
+  public function changeFormatDateForView($fecha)
+  {
+    if (isset($fecha) && !empty($fecha)) {
+      $newDateFormat = new DateTime($fecha);
+      return $newDateFormat->format('d/m/Y');
+    }
+  }
 }

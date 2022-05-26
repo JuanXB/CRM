@@ -60,4 +60,6 @@ class VentasClientesController extends BasicController
       return $this->ventas->editarVenta($ventaModificada);
     }
   }
+
+  //TODO: eliminar venta
 }

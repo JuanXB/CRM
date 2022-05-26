@@ -27,4 +27,11 @@ class VentasClientesModel extends BasicModel
 
     return false;
   }
+
+  //TODO: Calcular cantidad de dinero de ventas mes por cada cliente (usando id cliente)
+  //TODO: Calcular cantidad de dinero de ventas año por cada cliente (usando id cliente)
+  //TODO: Calcular cantidad de dinero de ventas total por cada cliente (usando id cliente)
+  //TODO: Calcular cantidad de dinero de ventas general
+  //TODO:Ventas del año actual (por mes)
+
 }

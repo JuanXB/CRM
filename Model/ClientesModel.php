@@ -32,11 +32,10 @@ class ClientesModel extends BasicModel
     return false;
   }
 
-  public function changeFormatDateForView($fecha)
-  {
-    if (isset($fecha) && !empty($fecha)) {
-      $newDateFormat = new DateTime($fecha);
-      return $newDateFormat->format('d/m/Y');
-    }
-  }
+  //TODO: Conteo de clientes
+  //TODO: Clientes registrados en los últimos 30 días
+  //TODO: Clientes registrados en el año actual
+  //TODO: Clientes por departamento
+  //TODO: Gráfica de clientes por edad
+  //TODO: Cantidad de clientes por año, del año actual y anterior
 }
