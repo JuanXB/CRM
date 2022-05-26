@@ -12,6 +12,7 @@ class VentasClientes extends BasicEntity
     parent::__construct($table, $adapter);
   }
 
+  // get y set del id correspondiente a la venta a nuestro cliente
   public function getId(): int
   {
     return $this->id;
@@ -22,7 +23,7 @@ class VentasClientes extends BasicEntity
     $this->id = $id;
   }
 
-
+  // get y set del id del cliente al que le correponden las ventas
   public function getIdCliente(): int
   {
     return $this->idCliente;
@@ -33,7 +34,7 @@ class VentasClientes extends BasicEntity
     $this->Edad = $idCliente;
   }
 
-
+  // get y set del monto de la venta 
   public function getMonto(): int
   {
     return $this->monto;
@@ -44,6 +45,7 @@ class VentasClientes extends BasicEntity
     $this->Edad = $monto;
   }
 
+  // get y set de la fecha que se realizo la venta
   public function getFecha(): string
   {
     return $this->fecha;
@@ -54,6 +56,7 @@ class VentasClientes extends BasicEntity
     $this->fechaReistro = $fecha;
   }
 
+  //Se guardan los datos de la venta realizada
   public function save(): bool
   {
 
@@ -62,10 +65,9 @@ class VentasClientes extends BasicEntity
     $fecha = $this->db()->real_escape_string($this->fecha);
 
 
-    $query = "INSERT INTO ventas_clientes(id_cliente, monto, fecha)
-              VALUES ( ?, ?, ?);";
+    $query = "INSERT INTO ventas_clientes(id_cliente, monto, fecha) VALUES ( ?, ?, ?);";
     $statment = $this->db()->prepare($query);
-    $statment->bind_param("dds", $idCliente, $monto, $fecha);
+    $statment->bind_param("sds", $idCliente, $monto, $fecha);
     $save = $statment->execute();
 
     $statment->close();

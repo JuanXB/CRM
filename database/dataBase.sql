@@ -3,6 +3,8 @@ CREATE TABLE IF NOT EXISTS clientes(
   nombre VARCHAR(255) NOT NULL,
   ciudad VARCHAR(255) NOT NULL,
   edad INT NOT NULL,
+  telefono INT NOT NULL,
+  email VARCHAR(255),
   fecha_registro VARCHAR(10) NOT NULL
 );
 CREATE TABLE IF NOT EXISTS ventas_clientes(
